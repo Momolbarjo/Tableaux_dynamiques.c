@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <time.h>
+
+
+int* randTab(int n, int x, int y){
+
+	int *ptab=NULL;
+	int ptab=malloc(n*sizeof(int));
+
+	if(ptab==NULL){
+
+		exit (-1);
+	}
+
+	for(int i=0; i<n;i++){
+		*(ptab+i)=x+rand()%(y-x+1);
+	}
+	
+	return ptab;
+}
+
+
+int* tabPair(int* ptb, int n,int* size){
+
+	int* ptabP=NULL;
+	int j=0;
+	ptabP=malloc(n*sizeof(int));
+	if(ptabP==NULL){
+		exit(-1)
+	}
+
+	for(int i=0;i<n;i++)
+{
+	if(*(ptb+i)%2==0){
+
+	*(ptab+j)=*(ptb+i);
+j++;
+}
+}
+
+*size=j+1;
+
+return ptabP;
+}
+
+
+int noDouble(int tab[],int taille){
+	int count=0;
+
+
+	for(int i=0;i<taille;i++){
+
+		for(int j=0;j<taille;j++){
+
+			if(tab[i]==tab[j]){
+				count++;
+			}
+		}
+	
+		
+void main () { 
+
+	srand(time(NULL));
+	int x,y,n;
+	int *ptr;
+
+	printf("Donner les valeurs: ");
+	scanf("%d",&x);
+	scanf("%d",&y);
+	scanf("%d",&n);
+
+	if(x<y){
+
+
+		ptr=randTab(x,y,n);
+	}
+	else{
+		ptr=randTab(y,x,n);
+}
+
+	if(ptr=NULL){
+
+		printf("Tab vide");
+}	
+
+	else{
+		for(int i=0;i<n;i++){
+			printf("%d",*(ptr+i);
+}
